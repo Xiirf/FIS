@@ -2,7 +2,7 @@ const express = require('express')
 var bodyParser = require('body-parser')
 
 const app = express()
-const port = 3001
+const port = (process.env.PORT || 3001)
 var API_PATH = "/api/v1";
 
 var contacts = [ 

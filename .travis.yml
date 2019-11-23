@@ -2,4 +2,3 @@ deploy:
   provider: heroku
   api_key:
     secure: "3da49a97-b242-4845-ab4b-8440a5cfebcc"
-  app: fisapptest

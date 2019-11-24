@@ -98,6 +98,6 @@ app.get(API_PATH + "/contacts/:_id", (req, res) => {
     });
 })
 
-app.get('/', (req, res) => res.send('Hello World!'))
+app.get('/', (req, res) => res.send('Hello World test!'))
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

@@ -1,5 +1,6 @@
 const express = require('express')
 var bodyParser = require('body-parser')
+var cors = require('cors')
 
 const app = express()
 const port = (process.env.PORT || 3000)
@@ -12,6 +13,7 @@ var contacts = [
     {"name" : "john", "phone": 6789, "_id": 2 } 
 
 ];
+app.use(cors());
 // Permet de transformer le contenu du body en Json
 app.use(bodyParser.json());
 
@@ -26,8 +28,6 @@ db.find({}, function (err, docs) {
         db.insert(contacts)
     }
 });
-
-
 
 app.get(API_PATH + "/contacts", (req, res) => {
     console.log(Date() + " GET /contacts")
